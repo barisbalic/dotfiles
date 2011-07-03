@@ -1,0 +1,2 @@
+source ~/.bash/completions/git
+complete -C ~/.bash/completions/rake -o default rake

@@ -1,0 +1,13 @@
+export EDITOR='mate -w' # Set textmate to your default editor
+export GEMEDITOR='mate' # Set your gem editor for use with gem open
+export EVENT_NOKQUEUE=1
+
+export GREP_OPTIONS='--color=auto'
+export CLICOLOR='cons25'
+
+HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+if [[ -s /Users/baris/.rvm/scripts/rvm ]] ; then  source /Users/baris/.rvm/scripts/rvm ; fi

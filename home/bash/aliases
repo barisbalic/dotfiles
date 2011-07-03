@@ -1,0 +1,34 @@
+# GIT aliases
+alias gst="git status"
+alias ga="git add *"
+alias gaa="git add ."
+alias gl="git pull"
+alias gp="git push"
+alias gc="git commit -v"
+alias gch="git checkout -v"
+alias gca="git commit -v -a"
+alias grt="git reset --hard head"
+alias gb="git branch"
+alias gba="git branch -a"
+alias glg="git log --oneline --decorate"
+
+# RubyGems aliases
+alias gi="gem install"
+alias gu="gem uninstall"
+alias grls="gem list -r | grep"
+
+# Lazy aliases
+alias ru="rackup"
+alias m="mate"
+alias rspc="rspec -c --format doc "
+alias mhosts="sudo mate /etc/hosts"
+alias mbashrc="mate ~/.bash_profile"
+alias rebash="source ~/.bash_rc"
+
+alias lsd="ls -ld *"
+alias psg='ps aux | grep -v grep | grep --color=auto -i'
+alias urar="unrar x"
+alias utar="untar -xvvf"
+alias is="ps aux | grep"
+alias cls="clear && ls"
+alias cpr="cp -R"

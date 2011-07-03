@@ -1,0 +1,14 @@
+# OSX specific commands go in here
+
+# Update db for locate
+alias updatedb=/usr/libexec/locate.updatedb
+
+# Show pretty man pages in OSX
+pman() {
+  man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
+# Display piped output in OSX preview
+pretty() {
+  "$1" | groff -Tps | open -f -a /Applications/Preview.app
+}
