@@ -3,5 +3,5 @@ source ~/.bash/completion
 source ~/.bash/paths
 source ~/.bash/aliases
 source ~/.bash/functions
-source ~/.bash/prompt
 source ~/.bash/osx
+source ~/.bash/prompt
