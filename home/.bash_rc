@@ -9,7 +9,7 @@ source ~/.bash/osx
 
 function __git_dirty {
   git diff --quiet HEAD &>/dev/null 
-  [ $? == 1 ] && echo "!"
+  [ $? == 1 ] && echo " (d!)"
 }
 
 function __git_branch {
@@ -19,7 +19,7 @@ function __git_branch {
 function __my_rvm_ruby_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+  local version=$(echo $MY_RUBY_HOME | awk -F'/' '{print $6}')
   [ "$version" == "1.8.7" ] && version=""
   local full="$version$gemset"
   [ "$full" != "" ] && echo "$full "
@@ -42,7 +42,7 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  PS1="$W\$(__my_rvm_ruby_version)$R\w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ "
+  PS1="$G\$(__my_rvm_ruby_version)$W\w $G\$(__git_branch)$R\$(__git_dirty)${NONE}$ "
 }
 
 bash_prompt
