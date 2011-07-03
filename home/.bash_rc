@@ -1,10 +1,7 @@
 source ~/.bash/config
-source ~/.bash/completions
+source ~/.bash/completion
 source ~/.bash/paths
 source ~/.bash/aliases
 source ~/.bash/functions
 source ~/.bash/prompt
 source ~/.bash/osx
-source ~/.bash/inputrc
-source ~/.bash/gemrc
-source ~/.bash/gitignore
