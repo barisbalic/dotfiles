@@ -9,5 +9,3 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-if [[ -s /Users/baris/.rvm/scripts/rvm ]] ; then  source /Users/baris/.rvm/scripts/rvm ; fi
