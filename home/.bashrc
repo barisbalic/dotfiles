@@ -16,13 +16,8 @@ function __git_branch {
   __git_ps1 "(%s)"
 }
 
-function __my_rvm_ruby_version {
-  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-  [ "$version" == "1.8.7" ] && version=""
-  local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full "
+function __rbenv_version {
+  # STILL TO DO
 }
 
 bash_prompt() {
@@ -41,7 +36,7 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  PS1="$G\$(__my_rvm_ruby_version)$W\w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ "
+  PS1="$G\$(__rbenv_version)$W\w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ "
 }
 
 bash_prompt
